@@ -163,14 +163,8 @@ namespace sharprepack
         /// </summary>
         private static void Usage()
         {
-            var oldColor = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Red;
-
-            Console.WriteLine("Usage: SharpRepack [-help] OR SharpRepack {new format} {filename}");
-            Console.WriteLine($"\tSupported formats are: {string.Join(", ", Enum.GetNames(typeof(SharpCompress.Common.ArchiveType)))}");
-
-
-            Console.ForegroundColor = oldColor;
+            WriteInfo("Usage: SharpRepack [-help] OR SharpRepack {new format} {filename}");
+            WriteInfo1($"\tSupported formats are: {string.Join(", ", Enum.GetNames(typeof(SharpCompress.Common.ArchiveType)))}");
         }
 
         #region Utility Functions
